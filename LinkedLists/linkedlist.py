@@ -138,19 +138,23 @@ class LinkedList:
         self.length -= 1
         return temp
     
-    # def reverse(self):
-       
+    def reverse(self):
+       temp = self.head
+       self.head = self.tail
+       self.tail = temp
+       after = temp.next
+       before = None
+       #at this point temp points to the head. i.e temp ko value is the head node
+       for _ in range(self.length):
+         after = temp.next 
+         temp.next = before
+         before = temp
+         temp = after
 
 
+# my_linked_list = LinkedList(1)
+# my_linked_list.append(2)
 
-
-
-
-
-
-my_linked_list = LinkedList(1)
-my_linked_list.append(2)
-
-print('Head:', my_linked_list.head.value)
-print('Tail:', my_linked_list.tail.value)
-print('Length:', my_linked_list.length)
+# print('Head:', my_linked_list.head.value)
+# print('Tail:', my_linked_list.tail.value)
+# print('Length:', my_linked_list.length)
