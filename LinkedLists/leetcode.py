@@ -67,8 +67,33 @@ def partition_list(ll, partition_value):
    
    dummy_list1.tail.next = dummy_list2.head.next
    ll.head = dummy_list1.head.next
-   #solution ko approach:
-   
+#    solution ko approach:
+#         if not self.head:
+#             return None
+    
+#         dummy1 = Node(0)
+#         dummy2 = Node(0)
+#         prev1 = dummy1
+#         prev2 = dummy2
+#         current = self.head
+    
+#         while current:
+#             if current.value < x:
+#                 prev1.next = current
+#                 prev1 = current
+#             else:
+#                 prev2.next = current
+#                 prev2 = current
+#             current = current.next
+    
+#         prev1.next = dummy2.next
+#         prev2.next = None
+    
+#         self.head = dummy1.next
+
+
+
+
 
 
 # def swap_node_in_pairs(ll):
